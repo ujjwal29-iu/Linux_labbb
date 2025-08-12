@@ -37,6 +37,6 @@ drwxr-xr-x 1 dell 197121     0 Aug 11 23:10  images/
 -rw-r--r-- 1 dell 197121  2083 Aug 12 10:19  README.md
 -rw-r--r-- 1 dell 197121 99532 Aug 11 23:43 'Screenshot 2025-08-11 194946-1.png'
 ```
-
+![Work bhai](./ls-la.png)
 
 
