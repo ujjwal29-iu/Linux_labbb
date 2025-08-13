@@ -1,5 +1,3 @@
----
-
 ## ✅ 1. **Navigation Commands**
 
 ### `pwd` – Print Working Directory
