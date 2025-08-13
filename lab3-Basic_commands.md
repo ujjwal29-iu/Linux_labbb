@@ -16,7 +16,8 @@ pwd
 /c/Users/dell/Downloads/linux_lab/Linux_labbb
 ```
 
-```
+---
+
 
 ### `ls` – List Directory Contents
 
