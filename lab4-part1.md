@@ -8,9 +8,13 @@
 
 ```bash
 # create an empty file
+
 # update timestamp of an existing file
+
 # create multiple files at once
-![](./images/2.png)
+
+![hmmm](/images/2.png)
+
 
 ```
 
