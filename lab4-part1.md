@@ -13,7 +13,7 @@
 
 # create multiple files at once
 
-![hmmm](2.png)
+c:\Users\dell\Downloads\linux_lab\Linux_labbb\2.png
 
 
 ```
