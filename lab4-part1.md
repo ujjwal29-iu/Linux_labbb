@@ -10,7 +10,7 @@
 # create an empty file
 # update timestamp of an existing file
 # create multiple files at once
-![work](./Screenshot%202025-08-18%20180533.png)
+![kuch bhi](/images/2025-08-18-18-42-11.png)
 
 ```
 
