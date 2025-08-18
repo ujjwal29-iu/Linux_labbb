@@ -10,7 +10,8 @@
 # create an empty file
 # update timestamp of an existing file
 # create multiple files at once
-![Work](./1.png)
+images/Screenshot 2025-08-11 194946.png
+
 ```
 
 ---
