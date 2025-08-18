@@ -13,11 +13,9 @@
 
 # create multiple files at once
 
-![](/2025-08-18-19-35-55.png)
-
 
 ```
-
+![work n](/2025-08-18-19-39-08.png)
 ---
 
 ### **`cp`** – Copy Files and Directories
