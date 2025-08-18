@@ -13,7 +13,6 @@
 
 # create multiple files at once
 
-
 ```
 ![work n](/2025-08-18-19-39-08.png)
 ---
@@ -22,16 +21,26 @@
 
 ```bash
 # Copy a file
-
-# Copy to another directory
-
-# Copy directory recursively
-
-# Preserve file attributes (timestamps, permissions)
-
+```
+![](/2025-08-18-19-47-32.png)
+---
 
 ```
-
+# Copy to another directory
+```
+![](/2025-08-18-19-54-43.png)
 ---
+
+```
+# Copy directory recursively
+```
+![](/2025-08-18-19-59-37.png)
+---
+```
+# Preserve file attributes (timestamps, permissions)
+```
+![](/2025-08-18-20-01-32.png)
+---
+
 
 
