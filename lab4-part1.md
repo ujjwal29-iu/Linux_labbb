@@ -13,7 +13,7 @@
 
 # create multiple files at once
 
-c:\Users\dell\Downloads\linux_lab\Linux_labbb\2.png
+![](/2025-08-18-19-35-55.png)
 
 
 ```
