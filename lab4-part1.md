@@ -13,7 +13,7 @@
 
 # create multiple files at once
 
-![hmmm](/images/2.png)
+![hmmm](./2.png)
 
 
 ```
