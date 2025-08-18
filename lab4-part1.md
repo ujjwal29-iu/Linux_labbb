@@ -10,9 +10,26 @@
 # create an empty file
 # update timestamp of an existing file
 # create multiple files at once
-![kuch bhi](/images/2025-08-18-18-42-11.png)
+![](./images/2.png)
 
 ```
 
 ---
+
+### **`cp`** – Copy Files and Directories
+
+```bash
+# Copy a file
+
+# Copy to another directory
+
+# Copy directory recursively
+
+# Preserve file attributes (timestamps, permissions)
+
+
+```
+
+---
+
 
