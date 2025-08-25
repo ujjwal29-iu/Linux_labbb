@@ -14,7 +14,7 @@
 # create multiple files at once
 
 ```
-![work n](/2025-08-18-19-39-08.png)
+![alt text](../images/2025-08-18-19-39-08.png)
 ---
 
 ### **`cp`** – Copy Files and Directories
@@ -22,24 +22,24 @@
 ```bash
 # Copy a file
 ```
-![](/2025-08-18-19-47-32.png)
+![alt text](../images/2025-08-18-19-47-32.png)
 ---
 
 ```
 # Copy to another directory
 ```
-![](/2025-08-18-19-54-43.png)
+![alt text](../images/2025-08-18-19-54-43.png)
 ---
 
 ```
 # Copy directory recursively
 ```
-![](/2025-08-18-19-59-37.png)
+![alt text](../images/2025-08-18-19-59-37.png)
 ---
 ```
 # Preserve file attributes (timestamps, permissions)
 ```
-![](/2025-08-18-20-09-13.png)
+![alt text](../images/2025-08-18-20-09-13.png)
 ---
 
 ### **`mv`** – Move or Rename Files
@@ -57,7 +57,7 @@
 ```
 # Move and overwrite without prompt
 ```
-![alt text](<Screenshot 2025-08-18 203852.png>)
+![alt text](<../images/Screenshot 2025-08-18 203852.png>)
 ---
 
 ### **`rm`** – Remove Files and Directories
@@ -65,12 +65,12 @@
 ```bash
 # Remove a file
 ```
-![](/2025-08-18-20-13-13.png)
+![alt text](../images/2025-08-18-20-13-13.png)
 ---
 ```
 # Remove multiple files
 ```
-![](/2025-08-18-20-14-40.png)
+![alt text](../images/2025-08-18-20-14-40.png)
 ---
 ```
 # Remove a directory recursively
