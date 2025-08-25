@@ -104,5 +104,5 @@ This moves `example.txt` into the `destination/` directory.
 
 
 ```
-
-![MY TERMINAL WORK](<Screenshot 2025-08-11 194946-1.png>)
+![alt text](<images/Screenshot 2025-08-11 194946-1.png>)
+---
