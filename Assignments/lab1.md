@@ -48,11 +48,6 @@ ls -l
 ```bash
 pwd
 ```
-
-```
-# Paste your real output here
-```
-
 ![](/../images/2025-09-10-16-32-34.png)
 
 > 📝 **Explanation:**  
@@ -67,9 +62,6 @@ pwd
 ```bash
 cat rellish.txt
 ```
-```
-# Paste your real output here
-```
 
 ![](../images/2025-09-10-15-58-22.png)
 
@@ -82,10 +74,6 @@ cat rellish.txt
 
 ```bash
 whoami
-```
-
-```
-# Paste your real output here
 ```
 
 ![](../images/2025-09-10-16-07-32.png)
