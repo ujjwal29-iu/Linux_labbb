@@ -21,6 +21,8 @@
 ### 📄 **Purpose**
 Prints numbers from 1 to 5.
 
+---
+
 ### 🧩 **Original Script Content**
 ```bash
 #!/bin/bash
@@ -32,11 +34,25 @@ done
 
 ---
 
+### 📝 **Line-by-Line Explanation**
+1. `#!/bin/bash`  
+   > Specifies the script should run with the Bash shell.
+2. `for i in {1..5}`  
+   > Loops through numbers 1 to 5.
+3. `do ... done`  
+   > Marks the start and end of the loop block.
+4. `echo $i`  
+   > Prints the current number.
+
+---
+
 ## 🛠️ **Enhanced Script: `enhanced_numbers.sh`**
 
 ### 📄 **New Features**
 - User provides **start**, **end**, and **step** values as command-line arguments.
 - Script validates that **step** is positive and all inputs are integers.
+
+---
 
 ### 🧩 **Enhanced Script Content**
 ```bash
@@ -71,6 +87,20 @@ done
 
 ---
 
+### 📝 **Line-by-Line Explanation**
+1. `if [ $# -ne 3 ]; then ... fi`  
+   > Checks if exactly 3 arguments are provided; if not, prints usage and exits.
+2. `start=$1`, `end=$2`, `step=$3`  
+   > Assigns command-line arguments to variables.
+3. `if ! [[ $step =~ ^[1-9][0-9]*$ ]]; then ... fi`  
+   > Validates that step is a positive integer.
+4. `if ! [[ $start =~ ^-?[0-9]+$ && $end =~ ^-?[0-9]+$ ]]; then ... fi`  
+   > Validates that start and end are integers.
+5. `for ((i=start; i<=end; i+=step)); do ... done`  
+   > Loops from start to end, incrementing by step, and prints each number.
+
+---
+
 ## 🔄 **Original vs. Enhanced Behavior**
 
 | Feature                | Original (`print_numbers.sh`) | Enhanced (`enhanced_numbers.sh`)         |
@@ -93,7 +123,7 @@ $ bash enhanced_numbers.sh 2 10 2
 8
 10
 ```
-![](../images/2025-09-10-17-16-23.png)
+![Example 1 Output](../images/2025-09-10-17-16-23.png)
 
 ---
 
@@ -102,7 +132,7 @@ $ bash enhanced_numbers.sh 2 10 2
 $ bash enhanced_numbers.sh 1 5 0
 Error: Step must be a positive integer.
 ```
-![](../images/2025-09-10-17-17-39.png)
+![Example 2 Output](../images/2025-09-10-17-17-39.png)
 
 ---
 

@@ -7,6 +7,13 @@
 
 ---
 
+## 🚦 **Tasks Overview**
+- Select two scripts from `Scripts/` (e.g., `print_numbers.sh`, `eight_script.sh`)
+- Run each script and observe the output
+- Provide script name, purpose, line-by-line explanation, and example run with input/output
+
+---
+
 ## 🗂️ **Script 1: `print_numbers.sh`**
 
 ### 📄 **Purpose**
@@ -32,8 +39,8 @@ done
    > Loops through numbers 1 to 5, assigning each to variable `i`.
 3. `do`  
    > Begins the loop block.
-4. `echo $i`  
-   > Prints the current value of `i`.
+4. `echo "Number:$i"`  
+   > Prints the current value of `i` with the label "Number:".
 5. `done`  
    > Ends the loop.
 
@@ -42,15 +49,14 @@ done
 ### ▶️ **Example Run**
 
 ```bash
-$ bash fifth_script.sh
+$ bash print_numbers.sh
 Number:1
 Number:2
 Number:3
 Number:4
 Number:5
 ```
-
-![](../images/2025-09-10-16-51-02.png)
+![print_numbers.sh Output](../images/2025-09-10-16-51-02.png)
 
 ---
 
@@ -63,6 +69,7 @@ Prints each element of an array.
 
 ### 🧩 **Script Content**
 ```bash
+#!/bin/bash
 fruits=("apple" "banana" "cherry")
 
 echo "First fruit: ${fruits[0]}"
@@ -77,14 +84,14 @@ done
 ### 📝 **Line-by-Line Explanation**
 1. `#!/bin/bash`  
    > Declares the script should run using the Bash shell.
-2. `arr=("apple" "banana" "cherry")`  
-   > Defines an array with three elements.
-3. `for item in "${arr[@]}"`  
-   > Loops through each element in the array, assigning it to `item`.
-4. `do`  
-   > Begins the loop block.
-5. `echo $item`  
-   > Prints the current array element.
+2. `fruits=("apple" "banana" "cherry")`  
+   > Defines an array named `fruits` with three elements.
+3. `echo "First fruit: ${fruits[0]}"`  
+   > Prints the first element of the array.
+4. `for fruit in "${fruits[@]}"; do`  
+   > Loops through each element in the array, assigning it to `fruit`.
+5. `echo "Fruit: $fruit"`  
+   > Prints the current array element with the label "Fruit:".
 6. `done`  
    > Ends the loop.
 
@@ -94,12 +101,12 @@ done
 
 ```bash
 $ bash eight_script.sh
-First fruit:apple
-Fruit:banana
-Fruit:cherry
+First fruit: apple
+Fruit: apple
+Fruit: banana
+Fruit: cherry
 ```
-
-![](../images/2025-09-10-16-48-25.png)
+![eight_script.sh Output](../images/2025-09-10-16-48-25.png)
 
 ---
 

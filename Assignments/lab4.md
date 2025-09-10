@@ -39,11 +39,16 @@ echo "Backup complete! All .txt files copied to backup/ with timestamp."
 ---
 
 ## 📝 **How the Script Works**
-1. **Creates a backup folder** if it doesn't exist using `mkdir -p backup`.
-2. **Gets the current timestamp** in `YYYYMMDD_HHMMSS` format.
-3. **Loops through all `.txt` files** in the current directory.
-4. **Copies each file** to the `backup/` folder, appending the timestamp to the filename.
-5. **Prints a completion message** after copying.
+1. **Creates a backup folder:**  
+   Uses `mkdir -p backup` to ensure the `backup/` directory exists.
+2. **Gets the current timestamp:**  
+   Stores the date and time in `YYYYMMDD_HHMMSS` format for unique filenames.
+3. **Loops through all `.txt` files:**  
+   For each `.txt` file in the current directory, checks if it’s a regular file.
+4. **Copies each file:**  
+   Copies the file to `backup/` and appends the timestamp to the filename.
+5. **Prints a completion message:**  
+   Lets the user know the backup is finished.
 
 ---
 
@@ -56,7 +61,7 @@ Backup complete! All .txt files copied to backup/ with timestamp.
 $ ls backup/
 file1_20250910_180000.txt  meet_20250910_180000.txt
 ```
-![](../images/2025-09-10-18-13-02.png)
+![Backup Script Output](../images/2025-09-10-18-13-02.png)
 
 ---
 

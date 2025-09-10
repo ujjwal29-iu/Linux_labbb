@@ -3,7 +3,7 @@
 ---
 
 ## 🎯 **Objective**
-> Build a starter project environment automatically with a shell script.
+> Automatically build a clean, organized starter project environment using a shell script.
 
 ---
 
@@ -14,40 +14,49 @@
 #!/bin/bash
 # starter_kit.sh
 
-# Create project structure
+# 1. Create project structure
 mkdir -p project/scripts
 mkdir -p project/docs
 mkdir -p project/data
 
-# Add placeholder README.md in each folder
+# 2. Add placeholder README.md in each folder
 echo "# Scripts" > project/scripts/README.md
 echo "# Documentation" > project/docs/README.md
 echo "# Data" > project/data/README.md
 echo "# Project Root" > project/README.md
 
-echo "Starter Kit Ready!"
+# 3. Print completion message
+echo "✨ Starter Kit Ready!"
 ```
 
 ---
 
 ## 📝 **How the Script Works**
+
 1. **Creates the folder structure:**  
    - `project/`
      - `scripts/`
      - `docs/`
      - `data/`
-2. **Adds a `README.md` file** in each folder with a placeholder title.
+2. **Adds a `README.md` file** in each folder with a relevant placeholder title.
 3. **Prints a completion message:**  
-   - `"Starter Kit Ready!"` confirms everything is set up.
+   - `"✨ Starter Kit Ready!"` confirms everything is set up.
 
-![](../images/2025-09-10-18-27-35.png)
+---
+
+## 🖼️ **Visual Output**
+
+> **After running the script, your folder structure will look like this:**
+
+![Folder Structure Screenshot](../images/2025-09-10-18-27-35.png)
+
 ---
 
 ## ▶️ **Example Run**
 
 ```bash
 $ bash starter_kit.sh
-Starter Kit Ready!
+✨ Starter Kit Ready!
 $ tree project/
 project/
 ├── README.md
@@ -58,8 +67,7 @@ project/
 └── scripts
     └── README.md
 ```
-
-![](../images/2025-09-10-18-24-58.png)
+![Terminal Output Screenshot](../images/2025-09-10-18-24-58.png)
 
 ---
 
@@ -81,4 +89,6 @@ project/
 
 <div align="center">
 
-✨ **End of Lab 5 – Starter Kit & Automation** ✨
+<hr style="width:60%;border:1px solid #bbb;"/>
+
+## ✨ **End of Lab 5 – Starter Kit & Automation** ✨
