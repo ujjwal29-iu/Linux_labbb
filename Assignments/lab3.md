@@ -93,8 +93,7 @@ $ bash enhanced_numbers.sh 2 10 2
 8
 10
 ```
-<!-- Place your screenshot here -->
-![Example 1 Output](../images/lab3-enhanced-numbers-1.png)
+![](../images/2025-09-10-17-16-23.png)
 
 ---
 
@@ -103,8 +102,7 @@ $ bash enhanced_numbers.sh 2 10 2
 $ bash enhanced_numbers.sh 1 5 0
 Error: Step must be a positive integer.
 ```
-<!-- Place your screenshot here -->
-![Example 2 Output](../images/lab3-enhanced-numbers-2.png)
+![](../images/2025-09-10-17-17-39.png)
 
 ---
 
