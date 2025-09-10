@@ -50,14 +50,13 @@ echo "Backup complete! All .txt files copied to backup/ with timestamp."
 ## ▶️ **Example Run**
 
 ```bash
-$ touch file1.txt file2.txt
+$ touch file1.txt meet.txt
 $ bash backup.sh
 Backup complete! All .txt files copied to backup/ with timestamp.
 $ ls backup/
-file1_20250910_180000.txt  file2_20250910_180000.txt
+file1_20250910_180000.txt  meet_20250910_180000.txt
 ```
-<!-- Place your screenshot here -->
-![Backup Script Output](../images/lab4-backup-output.png)
+![](../images/2025-09-10-18-13-02.png)
 
 ---
 
