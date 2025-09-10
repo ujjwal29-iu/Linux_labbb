@@ -85,7 +85,7 @@ image
 
 - Click **Install Ubuntu** (or your chosen distro).
 
-![](../images/2025-09-10-16-24-43.png)
+![](../images/2025-09-10-18-29-40.png)
 
 ---
 
