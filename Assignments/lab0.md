@@ -1,114 +1,136 @@
-# 🖥️ LAB 1: Installation of Linux Ubuntu on VirtualBox
+# 🖥️ **LAB 1: Installation of Linux Ubuntu on VirtualBox**
 
 ---
 
-## 🐧 What is Linux?
+<div align="center">
 
-Linux is an **open-source operating system kernel** that serves as the foundation for various operating systems, commonly referred to as **Linux distributions (distros)**. Developed by Linus Torvalds in 1991, Linux is known for its stability, security, and versatility, making it popular for servers, desktops, embedded systems, and more.
+![Linux Logo](https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png)
+</div>
 
 ---
 
-## 📝 Step 1: Download VirtualBox
+## 🐧 **What is Linux?**
 
-1. Go to the [VirtualBox Website](https://www.virtualbox.org/)
-2. Select your operating system
+> **Linux** is an **open-source operating system kernel** that powers a wide range of devices, from servers and desktops to embedded systems.  
+> Developed by Linus Torvalds in 1991, Linux is renowned for its stability, security, and flexibility, making it a favorite for tech enthusiasts and professionals alike.
+
+---
+
+## 📝 **Step 1: Download VirtualBox**
+
+1. 🌐 Go to the [VirtualBox Website](https://www.virtualbox.org/)
+2. 💻 Select your operating system and download the installer
 
 ![VirtualBox Download](../images/2025-09-10-14-51-52.png)
 
 ---
 
-## 🛠️ Step 2: Installing VirtualBox
+## 🛠️ **Step 2: Installing VirtualBox**
 
-### 1️⃣ The Beginning
+### 1️⃣ **Start the Installer**
 
 ![VirtualBox Start](../images/2025-09-10-14-49-41.png)
 
-### 2️⃣ Select Installation Location
+---
+
+### 2️⃣ **Select Installation Location**
 
 ![Installation Location](../images/2025-09-10-14-53-03.png)
 
-### 3️⃣ Ready to Install
+---
+
+### 3️⃣ **Ready to Install**
 
 ![Ready to Install](../images/2025-09-10-14-58-17.png)
 
-### 4️⃣ Installation Complete
+---
+
+### 4️⃣ **Installation Complete**
 
 ![Installation Complete](../images/2025-09-10-14-58-53.png)
 
-### 5️⃣ Opening VirtualBox
+---
+
+### 5️⃣ **Open VirtualBox**
 
 ![Opening VirtualBox](../images/2025-09-10-14-59-16.png)
 
 ---
 
-## 🐧 Step 3: Installing Linux Using VirtualBox
+## 🐧 **Step 3: Installing Linux Using VirtualBox**
 
-### 1️⃣ Naming Your Virtual Machine
+### 1️⃣ **Create a New Virtual Machine**
 
-After installing VirtualBox, click **New**.
-
-- Enter a name for your system (e.g., Ubuntu 24.04 LTS)
-- Select **Type:** Linux
-- **Operating System:** Ubuntu (64-bit)
-- **Version:** Ubuntu
+- Click **New**
+- Enter a name (e.g., `Ubuntu 24.04 LTS`)
+- **Type:** Linux
+- **Version:** Ubuntu (64-bit)
 
 ---
 
-### 2️⃣ Select the Amount of RAM
+### 2️⃣ **Select RAM Amount**
 
-![](../images/2025-09-10-16-09-34.png)
-
----
-
-### 3️⃣ Hard Disk Setting
-
-- Choose **Create a virtual hard drive now** to make a virtual disk space.
-- Select the amount of hard drive size.
-- Now you are done with hardware settings.
-
-![](../images/2025-09-10-16-14-05.png)
+![RAM Selection](../images/2025-09-10-16-09-34.png)
 
 ---
 
-### 4️⃣ Launching Your System
+### 3️⃣ **Configure Hard Disk**
 
-- Choose the downloaded Linux ISO file.
-- Click **Start** to launch your system.
-image
-- Choose your ISO file from your computer.
+- Choose **Create a virtual hard drive now**
+- Select the desired hard drive size
 
-![](../images/2025-09-10-16-16-37.png)
+![Hard Disk Setting](../images/2025-09-10-16-14-05.png)
 
 ---
 
-### 5️⃣ Final Installation
+### 4️⃣ **Launch and Attach ISO**
 
-- Click **Install Ubuntu** (or your chosen distro).
+- Click **Start**
+- Select your downloaded Linux ISO file
 
-![](../images/2025-09-10-18-29-40.png)
-
----
-
-### 👤 Make Your Account
-
-- Enter your details as shown below.
-
-![](../images/2025-09-10-16-21-45.png)
+![Choose ISO](../images/2025-09-10-16-16-37.png)
 
 ---
 
-## ❓ Q&A
+### 5️⃣ **Install Ubuntu**
 
-### 💡 What are two advantages of installing Ubuntu in VirtualBox?
-- 🟢 Robust snapshot and cloning capabilities
-- 🟢 Easy to experiment without affecting your main OS
+- Click **Install Ubuntu** (or your chosen distro)
 
-### 💡 What are two advantages of dual booting instead of using a VM?
-- 🚀 Better performance
-- 🖥️ Full hardware compatibility and access
+![Install Ubuntu](../images/2025-09-10-18-29-40.png)
 
 ---
 
-## 🎉 Congratulations!
+### 👤 **Create Your User Account**
 
-You have successfully installed **Ubuntu Linux** on VirtualBox!
+- Enter your details as prompted
+
+![Account Setup](../images/2025-09-10-16-21-45.png)
+
+---
+
+## ❓ **Q&A**
+
+<details>
+<summary>💡 <strong>What are two advantages of installing Ubuntu in VirtualBox?</strong></summary>
+
+- 🟢 **Snapshots & Cloning:** Easily save and restore system states.
+- 🟢 **Safe Experimentation:** Try new things without risking your main OS.
+</details>
+
+<details>
+<summary>💡 <strong>What are two advantages of dual booting instead of using a VM?</strong></summary>
+
+- 🚀 **Performance:** Native speed and hardware access.
+- 🖥️ **Full Compatibility:** Use all your system’s resources.
+</details>
+
+---
+
+<div align="center">
+
+## 🎉 **Congratulations!**
+
+You have successfully installed **Ubuntu Linux** on VirtualBox!  
+Happy exploring! 🚀🐧
+
+</div>
