@@ -56,7 +56,7 @@ After installing VirtualBox, click **New**.
 
 ### 2️⃣ Select the Amount of RAM
 
-![RAM Selection](../images/2025-09-10-XX-XX-XX.png) <!-- Replace with correct image if available -->
+![](../images/2025-09-10-16-09-34.png)
 
 ---
 
@@ -66,7 +66,7 @@ After installing VirtualBox, click **New**.
 - Select the amount of hard drive size.
 - Now you are done with hardware settings.
 
-![Hard Disk Setting](../images/2025-09-10-XX-XX-XX.png) <!-- Replace with correct image if available -->
+![](../images/2025-09-10-16-14-05.png)
 
 ---
 
@@ -74,19 +74,18 @@ After installing VirtualBox, click **New**.
 
 - Choose the downloaded Linux ISO file.
 - Click **Start** to launch your system.
-
-![Launching System](../images/202
+image
 - Choose your ISO file from your computer.
 
-![Choose ISO](../images/2025-0
+![](../images/2025-09-10-16-16-37.png)
 
 ---
 
 ### 5️⃣ Final Installation
 
-- Click **Install Linux Mint** (or your chosen distro).
+- Click **Install Ubuntu** (or your chosen distro).
 
-![Install Linux](../images
+![](../images/2025-09-10-16-24-43.png)
 
 ---
 
@@ -94,7 +93,7 @@ After installing VirtualBox, click **New**.
 
 - Enter your details as shown below.
 
-![Account Setup](.
+![](../images/2025-09-10-16-21-45.png)
 
 ---
 
