@@ -1,83 +1,115 @@
-# LAB 1 : INSTALLATION OF LINUX UBUNTU ON VIRTUAL BOX
+# 🖥️ LAB 1: Installation of Linux Ubuntu on VirtualBox
 
-## WHAT IS LINUX ?
-Linux is an open-source operating system kernel that serves as the
-foundation for various operating systems, commonly referred to as
-Linux distributions (or distros). Developed by Linus Torvalds in
-1991, Linux is known for its stability, security, and versatility,
-making it popular for servers, desktops, embedded systems, and
-more.
-## STEP 1 : DOWNLOAD VIRTUALBOX FILE .
+---
 
-    1 Go to the VirtualBox Website
+## 🐧 What is Linux?
 
-    2 select your operating system
+Linux is an **open-source operating system kernel** that serves as the foundation for various operating systems, commonly referred to as **Linux distributions (distros)**. Developed by Linus Torvalds in 1991, Linux is known for its stability, security, and versatility, making it popular for servers, desktops, embedded systems, and more.
 
-![](../images/2025-09-10-14-51-52.png)
+---
 
-## STEP 2 : INSTALLING VIRTUAL BOX
-    
- ### 1 The Beginning
+## 📝 Step 1: Download VirtualBox
 
-![](../images/2025-09-10-14-49-41.png)
- ### 2 select installation location
-![](../images/2025-09-10-14-53-03.png)
- ### 3 Ready to install
-![](../images/2025-09-10-14-58-17.png)
- ### 4 Installation complete 
-![](../images/2025-09-10-14-58-53.png)
- ### 5 Opening virtualbox
-![](../images/2025-09-10-14-59-16.png)
-## STEP 3 : INSTALLING LINUX USING VIRTUALBOX
-### 1 Naming virtual machine
+1. Go to the [VirtualBox Website](https://www.virtualbox.org/)
+2. Select your operating system
 
-   After installing virtual box ,click New .
+![VirtualBox Download](../images/2025-09-10-14-51-52.png)
 
-  - Write the Name you want for your system, for example: Ubuntu 24.04 LTS
-  - Select Type: Linux.
-  - Operating system: ubuntu(64 bit)
-  - Select Version: Ubuntu
-   
-image
-### 2 select the amount of ram
-![images
+---
 
-### 3 Hard Disk setting
-  Select hard disk setting:
+## 🛠️ Step 2: Installing VirtualBox
 
-  – Choose ‘Create a virtual hard drive Now’, in order to make a virtual disk space.
+### 1️⃣ The Beginning
 
-  – Select the amount of hard drive size.
+![VirtualBox Start](../images/2025-09-10-14-49-41.png)
 
-  -now you are done with hardware settings.
+### 2️⃣ Select Installation Location
 
-![images]
-### 4 Launching your System
+![Installation Location](../images/2025-09-10-14-53-03.png)
 
-   Choose the downloaded Linux ISO file:
+### 3️⃣ Ready to Install
 
-   – Click Start to launch your system
-![images]
-  - choose your iso file from your computer
-![images]
-  
-### 5 Final installation
+![Ready to Install](../images/2025-09-10-14-58-17.png)
 
-    Install Linux
+### 4️⃣ Installation Complete
 
-    – Click Install Linux Mint:
-     testf
-![images]
+![Installation Complete](../images/2025-09-10-14-58-53.png)
 
-### Make your Account:
+### 5️⃣ Opening VirtualBox
 
-– Enter your details as shown below
-![images
+![Opening VirtualBox](../images/2025-09-10-14-59-16.png)
 
-# what are two advantages of installing ubuntu in virtual box?
--Robust snapshot and cloning capabilities
-# what are two advantages of dual booting instead of using a vm?
--better perfomance
--full hardware compability and access
+---
 
-# CONGRATULATIONS YOU HAVE SUCCESSFULLY INSTALLED THEUBUNTU LINUX .
+## 🐧 Step 3: Installing Linux Using VirtualBox
+
+### 1️⃣ Naming Your Virtual Machine
+
+After installing VirtualBox, click **New**.
+
+- Enter a name for your system (e.g., Ubuntu 24.04 LTS)
+- Select **Type:** Linux
+- **Operating System:** Ubuntu (64-bit)
+- **Version:** Ubuntu
+
+---
+
+### 2️⃣ Select the Amount of RAM
+
+![RAM Selection](../images/2025-09-10-XX-XX-XX.png) <!-- Replace with correct image if available -->
+
+---
+
+### 3️⃣ Hard Disk Setting
+
+- Choose **Create a virtual hard drive now** to make a virtual disk space.
+- Select the amount of hard drive size.
+- Now you are done with hardware settings.
+
+![Hard Disk Setting](../images/2025-09-10-XX-XX-XX.png) <!-- Replace with correct image if available -->
+
+---
+
+### 4️⃣ Launching Your System
+
+- Choose the downloaded Linux ISO file.
+- Click **Start** to launch your system.
+
+![Launching System](../images/202
+- Choose your ISO file from your computer.
+
+![Choose ISO](../images/2025-0
+
+---
+
+### 5️⃣ Final Installation
+
+- Click **Install Linux Mint** (or your chosen distro).
+
+![Install Linux](../images
+
+---
+
+### 👤 Make Your Account
+
+- Enter your details as shown below.
+
+![Account Setup](.
+
+---
+
+## ❓ Q&A
+
+### 💡 What are two advantages of installing Ubuntu in VirtualBox?
+- 🟢 Robust snapshot and cloning capabilities
+- 🟢 Easy to experiment without affecting your main OS
+
+### 💡 What are two advantages of dual booting instead of using a VM?
+- 🚀 Better performance
+- 🖥️ Full hardware compatibility and access
+
+---
+
+## 🎉 Congratulations!
+
+You have successfully installed **Ubuntu Linux** on VirtualBox!
