@@ -63,11 +63,12 @@ Prints each element of an array.
 
 ### 🧩 **Script Content**
 ```bash
-#!/bin/bash
-arr=("apple" "banana" "cherry")
-for item in "${arr[@]}"
-do
-  echo $item
+fruits=("apple" "banana" "cherry")
+
+echo "First fruit: ${fruits[0]}"
+
+for fruit in "${fruits[@]}"; do
+    echo "Fruit: $fruit"
 done
 ```
 
@@ -93,9 +94,9 @@ done
 
 ```bash
 $ bash eight_script.sh
-apple
-banana
-cherry
+First fruit:apple
+Fruit:banana
+Fruit:cherry
 ```
 
 ![](../images/2025-09-10-16-48-25.png)
