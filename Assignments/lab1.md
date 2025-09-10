@@ -106,15 +106,6 @@ whoami
 
 ---
 
-## ✅ **Assignment Checklist**
-
-- [x] Commands executed  
-- [x] Outputs included  
-- [x] Screenshots added  
-- [x] Explanations (2–3 sentences each)  
-- [x] Extra questions answered  
-
----
 
 <div align="center">
 
