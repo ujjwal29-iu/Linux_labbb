@@ -32,10 +32,6 @@ cd Unit-1
 ls -l
 ```
 
-```
-# Paste your real output here
-```
-
 ![ls -l Output](../images/2025-09-10-15-29-38.png)
 
 > 📝 **Explanation:**  
@@ -48,7 +44,7 @@ ls -l
 ```bash
 pwd
 ```
-![](/../images/2025-09-10-16-32-34.png)
+![](../images/2025-09-10-16-32-34.png)
 
 > 📝 **Explanation:**  
 > `pwd` prints the current working directory, confirming your location in the filesystem.
