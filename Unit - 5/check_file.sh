@@ -20,5 +20,3 @@ else
     *) echo "Not creating file." ;;
   esac
 fi
----
-![](../images/2025-10-23-20-56-18.png)
