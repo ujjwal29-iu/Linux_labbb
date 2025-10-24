@@ -21,4 +21,4 @@ else
   esac
 fi
 
-![alt text](/images/Screenshot%202025-09-18%20112211.png)
+![](../imagesc:/Users/ASUS/Linux_labbbimages/2025-10-24-23-09-33.png)
