@@ -7,4 +7,4 @@ for i in "${a[@]}"; do
   echo "$i"
 done
 
-![](/images/../images/2025-10-24-22-43-50.png)
+# ![](../images/2025-10-24-22-43-50.png)
