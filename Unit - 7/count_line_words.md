@@ -19,3 +19,5 @@ chars=$(wc -m < "$1")
 echo "Lines: $lines"
 echo "Words: $words"
 echo "Characters: $chars"
+
+![](../images/2025-10-24-22-42-36.png)

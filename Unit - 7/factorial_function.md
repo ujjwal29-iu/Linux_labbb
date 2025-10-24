@@ -27,3 +27,5 @@ for arg in "$@"; do
   fi
   echo "$arg! = $(fact "$arg")"
 done
+
+![](../images/2025-10-24-22-43-12.png)
