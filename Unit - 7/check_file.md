@@ -1,5 +1,7 @@
-#!/bin/bash
+# !/bin/bash
+
 # check_file.sh
+
 # Usage: ./check_file.sh filename.txt
 
 if [ $# -ne 1 ]; then
@@ -20,7 +22,4 @@ else
     *) echo "Not creating file." ;;
   esac
 fi
----
-![](../../images/2025-10-25-00-25-34.png)
----
-*Screenshot: Example output of running `check_file.sh` script.*
+![alt text](<Screenshot 2025-09-18 112211.png>)
