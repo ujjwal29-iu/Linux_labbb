@@ -1,6 +1,6 @@
 #!/bin/bash
-# count_lwc.sh
-# Usage: ./count_lwc.sh filename.txt
+# count_lwc.md
+# Usage: ./count_lwc.md filename.txt
 
 if [ $# -ne 1 ]; then
   echo "Usage: $0 <filename>"
