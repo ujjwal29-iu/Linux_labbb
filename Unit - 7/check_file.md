@@ -21,4 +21,4 @@ else
   esac
 fi
 
-![](../imagesimages/2025-10-24-22-58-47.png)
+![alt text](<Screenshot 2025-09-18 112211.png>)
