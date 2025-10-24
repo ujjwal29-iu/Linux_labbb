@@ -1,8 +1,8 @@
 # !/bin/bash
 
-# check_file.sh
+# check_file.md
 
-# Usage: ./check_file.sh filename.txt
+# Usage: ./check_file.md filename.txt
 
 if [ $# -ne 1 ]; then
   echo "Usage: $0 <filename>"
