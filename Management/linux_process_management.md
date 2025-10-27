@@ -1,57 +1,44 @@
-# Linux Process Management — Lab Report
+# 🐧 Linux Process Management — Lab Report
+
+<div align="center">
+
+</div>
 
 ---
 
-## Title and Introduction
-
-Linux process management covers the mechanisms the kernel and userland provide to create, monitor, control, and terminate processes. Proper process management is essential for resource allocation, stability, performance tuning, and running services reliably on multi-user systems.
-
----
-
-## Objective
-
-- Demonstrate common process-management concepts and commands in Linux.  
-- Run examples to observe process states, control foreground/background tasks, and manage priorities.
+## 🎯 Objective
+> Understanding and implementing process management concepts in Linux through hands-on examples.
 
 ---
 
-## Theory
+## 🔍 Theory
 
-### What is a process?
-A process is an instance of a running program with its own memory, execution context, and system resources.
+### 🔸 What is a Process?
+A process is an instance of a running program with its own memory space and system resources.
 
-### Process states
-- R (Running or Runnable)  
-- S (Sleeping — waiting for an event)  
-- D (Uninterruptible sleep)  
-- T (Stopped by job control or tracer)  
-- Z (Zombie — terminated but not reaped)
+### 🔸 Process States
+- 🟢 R (Running/Runnable)
+- 🟡 S (Sleeping — waiting for event)
+- 🔴 D (Uninterruptible sleep)
+- 🟠 T (Stopped)
+- ⚫ Z (Zombie)
 
-### Foreground vs Background processes
-- Foreground: connected to the terminal; receives input and signals (e.g., Ctrl+C).  
-- Background: runs detached from terminal input; started with `&` or moved with `bg`.
+### 🔸 Process Types
+- ⌨️ Foreground: Connected to terminal
+- 🔙 Background: Runs independently
 
-### Process IDs (PID)
-- PID: unique identifier for a running process.  
-- PPID: Parent PID — processes are arranged in a tree (parent → child).
+### 🔸 Process Identifiers
+- 🆔 PID: Unique process ID
+- 👨‍👦 PPID: Parent process ID
 
-### Parent and Child processes
-- Created via `fork()` / `exec()` system calls. Parent waits for children or can reap them later.
-
-### Zombie and Orphan processes
-- Zombie: child finished but parent hasn't read its exit status (`wait()` not called). Shown with state `Z`.  
-- Orphan: parent exited before child — init (PID 1) adopts the orphan and reaps it.
-
-### Common tools
-- `ps` — snapshot of processes.  
-- `top` — dynamic, real-time view.  
-- `kill` — send signals to processes (SIGTERM, SIGKILL).  
-- `nice` — launch process with a given priority (niceness).  
-- `renice` — change priority of an existing process.
+### 🔸 Core Concepts
+- 👨‍👦 Parent/Child processes
+- 🧟 Zombie processes
+- 🤝 Orphan processes
 
 ---
 
-## Commands and Execution
+## ⚡ Commands & Examples
 
 ### View all processes (detailed)
 ```bash
@@ -239,16 +226,27 @@ ps f -p 1
 
 ---
 
-## Conclusion
+## 📊 Observations & Results
 
-This lab covered core Linux process-management concepts: identifying processes, viewing parent/child relationships, controlling jobs in foreground and background, detaching and reattaching processes, terminating processes, and tuning execution priority with `nice` and `renice`. These skills help maintain system stability, troubleshoot performance issues, and run long-lived services safely.
+// ...existing observations and image paths stay exactly the same...
+
+---
+
+## 🎓 Conclusion
+This practical lab demonstrated essential Linux process management concepts through hands-on examples.
 
 ---
 
-## References & Further Reading
-
-- man pages: `man ps`, `man top`, `man kill`, `man nice`, `man renice`, `man lsof`  
-- "Linux Performance" guides and kernel documentation for advanced process scheduling topics.
+## 📚 References & Resources
+- 📖 man pages: ps, top, kill, nice, renice
+- 🌐 Linux kernel documentation
+- 📑 System administration guides
 
 ---
+
+<div align="center">
+
+*~ End of Lab Report ~*
+
+</div>
 
