@@ -1,31 +1,31 @@
-#!/bin/bash
+# !/bin/bash
 # factorial.sh
 # Usage: ./factorial.sh 5
 
-fact() {
-  n=$1
-  if [ "$n" -le 1 ]; then
-    echo 1
-    return
-  fi
-  res=1
-  for ((i=2;i<=n;i++)); do
-    res=$(( res * i ))
-  done
-  echo "$res"
-}
+# fact() {
+  # n=$1
+  # if [ "$n" -le 1 ]; then
+  # echo 1
+  # return
+  # fi
+  # res=1
+  # for ((i=2;i<=n;i++)); do
+  # res=$(( res * i ))
+  # done
+  # echo "$res"
+# }
 
-if [ $# -lt 1 ]; then
-  echo "Usage: $0 <non-negative-integer> [another ...]"
-  exit 1
-fi
+# if [ $# -lt 1 ]; then
+  # echo "Usage: $0 <non-negative-integer> [another ...]"
+  # exit 1
+# fi
 
-for arg in "$@"; do
-  if ! [[ $arg =~ ^[0-9]+$ ]]; then
-    echo "$arg: not a non-negative integer, skipping."
-    continue
-  fi
-  echo "$arg! = $(fact "$arg")"
-done
+# for arg in "$@"; do
+  # if ! [[ $arg =~ ^[0-9]+$ ]]; then
+  # echo "$arg: not a non-negative integer, skipping."
+  # continue
+  # fi
+ # echo "$arg! = $(fact "$arg")"
+# done
 
-![](../images/2025-10-24-22-43-12.png)
+![](../Unit%20-%207/images/2025-10-27-21-48-25.png)

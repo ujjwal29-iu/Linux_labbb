@@ -1,10 +1,10 @@
-#!/bin/bash
+# !/bin/bash
 # Usage: ./one_to_ten.sh
 
-a=(1 2 3 4 5 6 7)
+# a=(1 2 3 4 5 6 7)
 
-for i in "${a[@]}"; do
-  echo "$i"
-done
+# for i in "${a[@]}"; do
+# echo "$i"
+# done
 
-# ![](../images/2025-10-24-22-43-50.png)
+![](../Unit%20-%207/images/2025-10-27-21-51-09.png)
