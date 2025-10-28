@@ -1,4 +1,4 @@
-# 🔒 SSH (Secure Shell) Quick Reference 🖥️
+# 🔒 SSH (Secure Shell) Quick Reference - Same Network 🖥️
 
 <div align="center">
 
@@ -12,9 +12,8 @@
 
 ## 📘 What is SSH?
 SSH (Secure Shell) is a cryptographic network protocol that provides a secure way to:
-- 🔐 Access remote systems over an unsecured network
+- 🔐 Access remote systems on the same network
 - ⌨️ Execute commands on remote machines
-- 📂 Transfer files securely
 - 🔄 Forward ports and applications
 - ⚙️ Manage remote services
 
@@ -23,12 +22,9 @@ SSH (Secure Shell) is a cryptographic network protocol that provides a secure wa
 - 🗝️ **Authentication:** Supports both password and public key authentication
 - ✅ **Integrity:** Ensures data hasn't been tampered with during transit
 - 🔀 **Port Forwarding:** Tunnel other protocols through SSH
-- 📤 **File Transfer:** Secure alternatives to FTP (SFTP, SCP)
 
 ### 💼 Common Use Cases
-- 🖥️ Remote server administration
-- 🐙 Git operations with GitHub/GitLab
-- 📁 Secure file transfers
+- 🖥️ Remote server administration on same network
 - 🗄️ Database management
 - 🌐 Web development
 - ☁️ Cloud computing (AWS, GCP, Azure)
@@ -36,7 +32,7 @@ SSH (Secure Shell) is a cryptographic network protocol that provides a secure wa
 ---
 
 ## 🔐 Purpose
-Practical, Ubuntu-focused commands and examples for key generation, authentication, remote access, file transfer, and common troubleshooting.
+Practical, Ubuntu-focused commands and examples for key generation, authentication, remote access on same network, and common troubleshooting.
 
 ---
 
@@ -95,13 +91,13 @@ cat ~/.ssh/id_ed25519.pub | ssh user@remote.host 'mkdir -p ~/.ssh && cat >> ~/.s
 ---
 
 ## 3) Connect and run commands
-Interactive:
+Interactive (same network):
 ```bash
-ssh user@remote.host
+ssh user@192.168.1.100
 ```
-Single command:
+Single command (same network):
 ```bash
-ssh user@remote.host 'uname -a && uptime'
+ssh user@192.168.1.100 'uname -a && uptime'
 ```
 ![](../Linux_Networking/images/2025-10-28-13-23-57.png)
 ---
@@ -119,8 +115,8 @@ ssh-add -l
 ## 5) SSH config for shortcuts (~/.ssh/config)
 Create/edit `~/.ssh/config`:
 ```text
-Host uni-server
-  HostName remote.host.edu
+Host local-server
+  HostName 192.168.1.100
   User youruser
   Port 22
   IdentityFile ~/.ssh/id_ed25519
@@ -130,53 +126,46 @@ Host uni-server
 ---
 Connect with:
 ```bash
-ssh uni-server
+ssh local-server
 ```
 ![](../Linux_Networking/images/2025-10-28-13-38-48.png)
 
 ---
 
 ## 6) Port forwarding (local → remote)
-Local forward (access remote web app locally):
+Local forward (access remote web app locally on same network):
 ```bash
-ssh -L 8080:localhost:8000 user@remote.host
+ssh -L 8080:localhost:8000 user@192.168.1.100
 # browse http://localhost:8080
 ```
 ![](../Linux_Networking/images/2025-10-28-13-41-52.png)
 ---
 
 ## 7) File transfer: scp & sftp
-SCP (single file):
+SCP (single file on same network):
 ```bash
-scp localfile.txt user@remote.host:/home/user/
+scp localfile.txt user@192.168.1.100:/home/user/
 ```
-SCP (directory):
+![](../Linux_Networking/images/2025-10-28-22-18-56.png)
+---
+SCP (directory on same network):
 ```bash
-scp -r project/ user@remote.host:/home/user/project_backup/
+scp -r project/ user@192.168.1.100:/home/user/project_backup/
 ```
-SFTP interactive:
+![](../Linux_Networking/images/2025-10-28-22-24-33.png)
+---
+![](../Linux_Networking/images/2025-10-28-22-24-58.png)
+---
+SFTP interactive (same network):
 ```bash
-sftp user@remote.host
+sftp user@192.168.1.100
 sftp> put localfile
 ```
-
+![](../Linux_Networking/images/2025-10-28-22-36-42.png)
 ---
 
-## 8) SSH for Git
-- Add `~/.ssh/id_ed25519.pub` to Git host account.
-- Use SSH remote:
-```bash
-git remote add origin git@github.com:username/repo.git
-git push -u origin main
-```
-Test:
-```bash
-ssh -T git@github.com
-```
 
----
-
-## 9) Troubleshooting checklist
+## 8) Troubleshooting checklist
 - Permissions: `chmod 700 ~/.ssh && chmod 600 ~/.ssh/authorized_keys`
 - Verbose SSH: `ssh -vvv user@host`
 - Confirm key present: `ssh-add -l`
@@ -184,20 +173,20 @@ ssh -T git@github.com
 
 ---
 
-## 10) Best practices
+## 9) Best practices
 - Prefer `ed25519` keys with passphrase.  
 - Use `~/.ssh/config` for convenience.  
 - Keep private keys private; remove unused keys on servers.
 
 ---
 
-## Quick commands
+## 10)Quick commands
 ```bash
 ssh-keygen -t ed25519
-ssh-copy-id user@host
-ssh user@host
-scp file user@host:/path/
-ssh -L 8080:localhost:8000 user@host
+ssh-copy-id user@192.168.1.100
+ssh user@192.168.1.100
+scp file user@192.168.1.100:/path/
+ssh -L 8080:localhost:8000 user@192.168.1.100
 ```
 
 >
