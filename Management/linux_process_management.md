@@ -128,10 +128,8 @@ disown %1
 ```
 **Explanation:** Removes job 1 from shell's job table so it will not receive SIGHUP on shell exit.
 
-```
-![Screenshot – disown example](images/disown.png)
-```
-
+---
+![](../Management/images/2025-10-28-09-46-37.png)
 ---
 
 ### Run detached (nohup)
@@ -179,24 +177,19 @@ pkill -f processname
 nice -n 10 ./compute-heavy.sh
 ```
 **Explanation:** Launches `compute-heavy.sh` with niceness 10 (lower priority).
-
-```
-![Screenshot – nice example](images/nice.png)
-```
-
+---
+![](../Management/images/2025-10-28-09-56-15.png)
 ---
 
 ### Change priority of running process
 ```bash
 renice +5 -p 12345
 renice -n -10 -p 12345
+renice -n 5 -p 12345
 ```
 **Explanation:** `renice` changes niceness of PID 12345 (positive increases nice value = lower priority).
-
-```
-![Screenshot – renice example](images/renice.png)
-```
-
+---
+![](../Management/images/2025-10-28-10-03-13.png)
 ---
 
 ### View process open files and resources
@@ -204,23 +197,18 @@ renice -n -10 -p 12345
 lsof -p 12345
 ```
 **Explanation:** Lists files, sockets, and resources opened by PID 12345.
-
-```
-![Screenshot – lsof example](images/lsof.png)
-```
-
+---
+![](../Management/images/2025-10-28-10-05-03.png)
 ---
 
 ### Show process tree for a PID
 ```bash
-ps f -p 1
+ps f -p 12345
 ```
 **Explanation:** Shows process hierarchy for PID 1 (or change PID as needed).
 
-```
-![Screenshot – ps tree example](images/ps_f.png)
-```
-
+---
+![](../Management/images/2025-10-28-10-07-34.png)
 ---
 
 
