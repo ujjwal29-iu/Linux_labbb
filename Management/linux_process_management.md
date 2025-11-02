@@ -212,11 +212,223 @@ ps f -p 12345
 ---
 
 
+## 🧠 Advanced Topics & Tools
+
+This section adds detailed theory, commands and short examples for advanced process-management topics that supplement the previous sections.
+
 ---
 
-## 📊 Observations & Results
+### Signals (SIGTERM vs SIGKILL and common signals)
+- SIGTERM (15) — polite request to terminate; process can catch and clean up.  
+- SIGKILL (9) — immediate forced termination; cannot be caught or ignored.  
+- SIGHUP (1) — hangup; commonly used to tell daemons to reload config.  
+- SIGSTOP / SIGCONT — stop and continue a process (job control).
 
-// ...existing observations and image paths stay exactly the same...
+Example:
+```bash
+# polite terminate
+kill -15 3050
+
+# force kill
+kill -9 3050
+```
+**Explanation:** Prefer SIGTERM then SIGKILL only if process doesn't exit.
+
+---
+![](../Management/images/2025-11-01-21-12-42.png)
+---
+
+### CPU Affinity — taskset (bind process to CPU cores)
+- Use CPU affinity to bind a process to specific CPU core(s).
+```bash
+# view current affinity
+taskset -cp 3050
+
+# set affinity to core 1 only
+taskset -cp 1 3050
+
+# start a process on cores 0-1
+taskset -c 0,1 ./compute-heavy.sh
+```
+**Explanation:** Useful to reduce cache thrashing or isolate workloads.
+
+---
+
+![](../Management/images/2025-11-01-21-16-32.png)
+---
+### I/O Scheduling Priority — ionice
+- Controls disk I/O scheduling class and priority.
+```bash
+# set process to idle I/O class (only uses disk when idle)
+ionice -c 3 -p 3050
+
+# run a command with best-effort class and priority 7
+ionice -c 2 -n 7 tar -czf backup.tar.gz /home
+```
+**Explanation:** Helps limit I/O interference from background jobs.
+---
+![](../Management/images/2025-11-01-21-27-02.png)
+---
+![](../Management/images/2025-11-01-21-29-46.png)
+---
+
+### Per-Process Statistics — pidstat
+- Monitor per-process CPU usage over time.
+```bash
+# sample PID 3050 every 2 seconds, 3 samples
+pidstat -p 3050 2 3
+```
+**Explanation:** Useful to observe CPU trends for a specific PID.
+---
+![](../Management/images/2025-11-01-21-40-05.png)
+---
+
+### Trace System Calls — strace
+- Attach to a running process and inspect system calls.
+```bash
+# attach and view syscalls
+sudo strace -p 3050
+
+# run a command under strace
+strace -o trace.txt ls
+```
+**Explanation:** Great for debugging why a process is failing (file access, network calls).
+---
+![](../Management/images/2025-11-01-21-48-04.png)
+---
+
+---
+
+![](../Management/images/2025-11-01-21-48-34.png)
+---
+
+### Find Process Using a Port — fuser / ss / netstat
+```bash
+# find PID using TCP port 8080
+sudo fuser -n tcp 8080
+
+# alternative: list sockets and PIDs
+sudo ss -tulpn | grep 8080
+```
+**Explanation:** Identifies which process is bound to a port (useful before killing or reconfiguring).
+---
+![](../Management/images/2025-11-01-21-57-20.png)
+---
+
+### Control Groups (cgroups) — basic resource limiting
+- Create a cgroup, set CPU and memory limits, add a PID:
+```bash
+# create cgroup (requires cgroup-tools or systemd)
+sudo cgcreate -g cpu,memory:/testgroup
+
+# limit CPU (cfs quota in microseconds)
+echo 50000 | sudo tee /sys/fs/cgroup/cpu/testgroup/cpu.cfs_quota_us
+
+# limit memory to 100MB
+echo $((100*1024*1024)) | sudo tee /sys/fs/cgroup/memory/testgroup/memory.limit_in_bytes
+
+# add PID 3050 to the cgroup
+echo 3050 | sudo tee /sys/fs/cgroup/cpu/testgroup/cgroup.procs
+```
+**Explanation:** cgroups provide strong isolation and resource controls for processes or groups.
+
+---
+![](../Management/images/2025-11-03-00-34-33.png)
+---
+
+### Real-Time Scheduling — chrt
+- Set real-time scheduling policies (FIFO or RR).
+```bash
+# run command with FIFO policy, priority 50
+sudo chrt -f 50 sleep 1000
+
+# change scheduling of running PID
+sudo chrt -p 50 3050
+```
+**Explanation:** Use with caution — real-time tasks can starve normal processes.
+
+---
+![](../Management/images/2025-11-01-22-11-03.png)
+---
+
+---
+![](../Management/images/2025-11-01-22-14-05.png)
+---
+
+### schedtool (advanced scheduling tweaks)
+```bash
+# set round-robin priority 10 on PID
+sudo schedtool -R -p 10 3050
+```
+**Explanation:** Alternative low-level scheduling tweaks; platform-dependent.
+
+---
+![](../Management/images/2025-11-01-22-28-31.png)
+---
+
+### systemd-run — temporary scopes with resource settings
+```bash
+# run stress under systemd scope with CPUWeight control
+systemd-run --scope -p CPUWeight=200 stress --cpu 4
+
+# run a command and limit memory
+systemd-run --scope -p MemoryMax=200M ./compute-heavy.sh
+```
+**Explanation:** Convenient to run one-off tasks with cgroup-based limits via systemd.
+
+---
+![](../Management/images/2025-11-01-22-33-37.png)
+---
+
+---
+![](../Management/images/2025-11-01-22-42-13.png)
+---
+
+### lsof — list open files/resources per process
+```bash
+lsof -p 3050 | head -10
+```
+**Explanation:** Shows files, sockets and devices a process has open; helpful for debugging leaks.
+---
+![](../Management/images/2025-11-03-00-19-18.png)
+---
+
+### Summary: Tools & When to Use Them
+
+| Tool | Purpose | Use When… |
+|------|---------|-----------|
+| ps, top, htop | Inspect processes | Quick snapshot or live monitoring |
+| pstree, ps f | Parent/child view | Understanding process hierarchy |
+| kill, pkill | Send signals | Terminate or signal processes |
+| nice, renice | CPU niceness | Lower priority background jobs |
+| taskset | CPU affinity | Bind to specific cores |
+| ionice | I/O priority | Reduce disk contention |
+| pidstat | Per-process stats | Time-series CPU analysis |
+| strace | Syscall tracing | Debugging failing processes |
+| fuser, ss | Port/process mapping | Identify service owners of ports |
+| cgroups, systemd-run | Resource limits | Enforce QoS and isolation |
+| chrt, schedtool | Real-time scheduling | Real-time workloads (careful) |
+
+---
+
+## ✅ Practical examples (quick recap)
+
+```bash
+# Start low-priority background job
+nice -n 10 sleep 300 &
+
+# Bind a running PID to CPU 1
+taskset -cp 1 3050
+
+# Make process IO idle
+ionice -c 3 -p 3050
+
+# Trace syscalls
+sudo strace -p 3050
+
+# Limit memory with systemd-run
+systemd-run --scope -p MemoryMax=150M sleep 600
+```
 
 ---
 
@@ -237,4 +449,3 @@ This practical lab demonstrated essential Linux process management concepts thro
 *~ End of Lab Report ~*
 
 </div>
-
