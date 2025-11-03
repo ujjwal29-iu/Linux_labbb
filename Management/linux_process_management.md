@@ -1,10 +1,11 @@
-# 🐧 Linux Process Management — Lab Report
-
 <div align="center">
-
+  <h1 style="background: linear-gradient(90deg,#001f3f,#0066cc); color:#fff; padding:20px 28px; border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,0.28); display:inline-block; font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;">
+    🐧 Linux Process Management — Lab Report
+  </h1>
+  <p style="color:#6b7280; margin-top:8px;">Concise lab report with commands, examples and screenshots — process states, monitoring, priorities and advanced tooling.</p>
 </div>
 
----
+<hr style="border:0; height:1px; background:linear-gradient(90deg,#eef2ff,#f7fbff); margin:18px 0;" />
 
 ## 🎯 Objective
 > Understanding and implementing process management concepts in Linux through hands-on examples.
