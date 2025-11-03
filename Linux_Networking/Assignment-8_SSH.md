@@ -112,7 +112,7 @@ exit
 ```bash
 ip addr show
 ```
-![](Linux_Networking/images/2025-11-03-18-59-21.png)
+![](../Linux_Networking/images/2025-11-03-18-59-21.png)
 
 ### **Step 2:Display hostname**
 ```bash
