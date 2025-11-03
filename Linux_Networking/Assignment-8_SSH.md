@@ -1,335 +1,320 @@
-# 🚀 Assignment 8 — Secure GUI Access via SSH (X11) or VNC
+<div align="center">
+<h1 style="background: linear-gradient(90deg,#0f172a,#004aad); color:#fff; padding:18px 24px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.25); display:inline-block;">
+🚀 Assignment 8 — Secure GUI Access via SSH (X11) or VNC
+</h1>
+</div>
 
 <div align="center">
-
 ![](../Linux_Networking/images/2025-10-28-12-24-08.png)
+</div>
 
-# **Experiment: Basic Linux Data Networking Commands**
+<h2 style="margin-top:18px; color:#0b5cff; border-left:6px solid #ffd54f; padding-left:12px;">
+🧪 <strong>Experiment:</strong> Basic Linux Data Networking Commands
+</h2>
 
-## **Aim**
-To study and execute basic data networking commands in Linux using the command line interface.
+<h3 style="color:#0f5132; background:#e6fff4; padding:10px 12px; border-radius:8px;">
+🎯 <strong>Aim</strong>
+</h3>
+<p>To study and execute basic data networking commands in Linux using the command line interface.</p>
 
----
+<hr style="border:0; height:1px; background:linear-gradient(90deg,#eee,#ddd); margin:18px 0;" />
 
-## **Objectives**
-- To understand Linux network configuration.
-- To test network connectivity.
-- To diagnose network-related issues.
-- To access and transfer data between systems using networking tools.
+<h3 style="color:#0b3a75; background:#eef6ff; padding:10px 12px; border-radius:8px;">
+📌 <strong>Objectives</strong>
+</h3>
+<ul>
+<li>To understand Linux network configuration.</li>
+<li>To test network connectivity.</li>
+<li>To diagnose network-related issues.</li>
+<li>To access and transfer data between systems using networking tools.</li>
+</ul>
 
----
+<hr style="border:0; height:1px; background:linear-gradient(90deg,#eee,#ddd); margin:18px 0;" />
 
-## **Requirements**
-- Linux Operating System (Ubuntu/Debian/Fedora/Kali etc.)
-- Terminal access
-- Basic knowledge of Linux commands
-- Internet connection (optional)
+<h3 style="color:#7b3b00; background:#fff6e6; padding:10px 12px; border-radius:8px;">
+🧾 <strong>Requirements</strong>
+</h3>
+<ul>
+<li>Linux Operating System (Ubuntu/Debian/Fedora/Kali etc.)</li>
+<li>Terminal access</li>
+<li>Basic knowledge of Linux commands</li>
+<li>Internet connection (optional)</li>
+</ul>
 
----
+<hr style="border:0; height:1px; background:linear-gradient(90deg,#eee,#ddd); margin:18px 0;" />
 
-## **Theory**
-Data networking in Linux is performed using built-in terminal commands. These commands help configure systems, test connections, and troubleshoot network problems.
+<h3 style="color:#004d40; background:#e6fff5; padding:10px 12px; border-radius:8px;">
+📚 <strong>Theory</strong>
+</h3>
+<p>Data networking in Linux is performed using built-in terminal commands. These commands help configure systems, test connections, and troubleshoot network problems.</p>
 
-| Command | Purpose |
-|----------|---------|
-| `ifconfig` / `ip addr` | Shows network interface configuration |
-| `ping` | Tests connectivity to another host |
-| `hostname` | Displays system hostname |
-| `traceroute` | Shows the route packets take |
-| `netstat` | Displays active connections |
-| `nslookup` | Queries DNS information |
-| `ssh` | Secure remote login |
-| `scp` | Secure file transfer |
+<table style="width:100%; border-collapse:collapse; margin-top:8px;">
+<tr style="background:#0b69ff; color:#fff;">
+<th style="padding:8px; text-align:left;">Command</th>
+<th style="padding:8px; text-align:left;">Purpose</th>
+</tr>
+<tr style="background:#f7f9ff;">
+<td style="padding:8px;"><code>ifconfig</code> / <code>ip addr</code></td>
+<td style="padding:8px;">Shows network interface configuration</td>
+</tr>
+<tr>
+<td style="padding:8px;"><code>ping</code></td>
+<td style="padding:8px;">Tests connectivity to another host</td>
+</tr>
+<tr style="background:#f7f9ff;">
+<td style="padding:8px;"><code>hostname</code></td>
+<td style="padding:8px;">Displays system hostname</td>
+</tr>
+<tr>
+<td style="padding:8px;"><code>traceroute</code></td>
+<td style="padding:8px;">Shows the route packets take</td>
+</tr>
+<tr style="background:#f7f9ff;">
+<td style="padding:8px;"><code>netstat</code></td>
+<td style="padding:8px;">Displays active connections</td>
+</tr>
+<tr>
+<td style="padding:8px;"><code>nslookup</code></td>
+<td style="padding:8px;">Queries DNS information</td>
+</tr>
+<tr style="background:#f7f9ff;">
+<td style="padding:8px;"><code>ssh</code></td>
+<td style="padding:8px;">Secure remote login</td>
+</tr>
+<tr>
+<td style="padding:8px;"><code>scp</code></td>
+<td style="padding:8px;">Secure file transfer</td>
+</tr>
+</table>
 
----
+<hr style="border:0; height:1px; background:linear-gradient(90deg,#eee,#ddd); margin:18px 0;" />
 
-## **Procedure**
+<h2 style="color:#0b5cff; background:linear-gradient(90deg,#f0f8ff,#e6f0ff); padding:12px 14px; border-radius:10px;">
+🏠 <strong>Case 1 — Same Network (LAN): Friend's Ubuntu ↔ Your Ubuntu</strong>
+</h2>
 
-# **🏠 Case 1: Friend's ubuntu and Ubuntu on the same network**
-## **✅Step 1: Enable SSH on Ubuntu**
-
-On Ubuntu, install and enable SSH:
-```
+<h3 style="color:#006064; background:#e6fffb; padding:8px 10px; border-radius:8px;">
+✅ Step 1: Enable SSH on Ubuntu
+</h3>
+<pre style="background:#0d1b2a; color:#e6f7ff; padding:12px; border-radius:8px; overflow:auto;">
 sudo apt update
 sudo apt install openssh-server
 sudo systemctl enable ssh
 sudo systemctl start ssh
-```
-![](../Linux_Networking/images/2025-11-03-16-13-12.png)
-Check it’s running:
+</pre>
+<p><img src="../Linux_Networking/images/2025-11-03-16-13-12.png" alt="ssh enable" /></p>
 
-```
-sudo systemctl status ssh
-```
-
-##  ✅ Step 2: Find Ubuntu’s local IP address
-
-Run:
-
-```
+<h3 style="color:#006064; background:#e6fffb; padding:8px 10px; border-radius:8px;">
+✅ Step 2: Find Ubuntu's local IP address
+</h3>
+<pre style="background:#0d1b2a; color:#e6f7ff; padding:12px; border-radius:8px; overflow:auto;">
 hostname -I
-```
-![](../Linux_Networking/images/2025-11-03-16-13-54.png)
-You’ll get something like 192.168.1.42.
+</pre>
+<p><img src="../Linux_Networking/images/2025-11-03-16-13-54.png" alt="hostname -I" /></p>
 
-## ✅ Step 3: Connect from friends ubuntu
-
-On your friends ubuntu, open Terminal and run:
-
-```
+<h3 style="color:#006064; background:#e6fffb; padding:8px 10px; border-radius:8px;">
+✅ Step 3: Connect from friend's Ubuntu
+</h3>
+<pre style="background:#0d1b2a; color:#e6f7ff; padding:12px; border-radius:8px; overflow:auto;">
 ssh username@192.168.1.42
-```
-Replace username with your Ubuntu username.
+</pre>
+<p><img src="../Linux_Networking/images/2025-11-03-17-29-20.png" alt="ssh session" /></p>
 
-Enter your password when prompted — you’re in! ✅
-
-![](../Linux_Networking/images/2025-11-03-17-29-20.png)
-
-## ✅ Step 4: Create a File on Remote Computer
-```bash
+<h3 style="color:#006064; background:#e6fffb; padding:8px 10px; border-radius:8px;">
+✅ Step 4–7: Create, verify, delete file & exit
+</h3>
+<pre style="background:#0d1b2a; color:#e6f7ff; padding:12px; border-radius:8px; overflow:auto;">
 echo "This file was created remotely using SSH" > ~/ssh_test.txt
-```
-## ✅ Step 5: Verify the File**
-```bash
 cat ~/ssh_test.txt
-```
-## ✅ Step 6: Delete the File
-```bash
 rm ~/ssh_test.txt
-```
-## ✅ Step 7: Exit SSH
-```bash
 exit
-```
+</pre>
+<p><img src="../Linux_Networking/images/2025-11-03-17-31-09.png" alt="post ssh" /></p>
 
-![](../Linux_Networking/images/2025-11-03-17-31-09.png)
+<hr style="border:0; height:1px; background:linear-gradient(90deg,#eee,#ddd); margin:18px 0;" />
 
-# **🌐 Case 2: Ubuntu and Ubuntu on different networks (e.g., home ↔ office or remote server)**
+<h2 style="color:#7b3b00; background:linear-gradient(90deg,#fff7e6,#fff2d9); padding:12px 14px; border-radius:10px;">
+🌐 <strong>Case 2 — Different Networks (WAN): Remote Server / Cloud VM</strong>
+</h2>
 
-##  **✅🔹 Option 1: Connect to a remote Ubuntu server (e.g., cloud VM)**
-
-### **Step 1: View IP Address and Network Interfaces**
-```bash
+<h3 style="color:#0b3a75; background:#eef6ff; padding:8px 10px; border-radius:8px;">
+🔹 Step 1: View IP Address & Interfaces
+</h3>
+<pre style="background:#0d1b2a; color:#e6f7ff; padding:12px; border-radius:8px; overflow:auto;">
 ip addr show
-```
-![](../Linux_Networking/images/2025-11-03-18-59-21.png)
+</pre>
+<p><img src="../Linux_Networking/images/2025-11-03-18-59-21.png" alt="ip addr" /></p>
 
-### **Step 2:Display hostname**
-```bash
+<h3 style="color:#0b3a75; background:#eef6ff; padding:8px 10px; border-radius:8px;">
+🔹 Step 2: Display hostname
+</h3>
+<pre style="background:#0d1b2a; color:#e6f7ff; padding:12px; border-radius:8px; overflow:auto;">
 hostname
-```
-![](../Linux_Networking/images/2025-11-03-19-00-33.png)
----
-### **step 3:Test Network connectivity(ping)**
-```bash
+</pre>
+<p><img src="../Linux_Networking/images/2025-11-03-19-00-33.png" alt="hostname" /></p>
+
+<h3 style="color:#0b3a75; background:#eef6ff; padding:8px 10px; border-radius:8px;">
+🔹 Step 3–6: Connectivity tests & diagnostics
+</h3>
+<pre style="background:#0d1b2a; color:#e6f7ff; padding:12px; border-radius:8px; overflow:auto;">
 ping google.com -c 4
-```
-![](../Linux_Networking/images/2025-11-03-17-33-02.png)
-
-### **Step 4: Trace Route to Remote Host**
-```bash
 traceroute google.com
-```
-![](../Linux_Networking/images/2025-11-03-17-44-06.png)
----
-### **Step 5: View Active Network Ports**
-```bash
 netstat -tulnp
-```
-![](../Linux_Networking/images/2025-11-03-17-44-58.png)
----
-### **Step 6: DNS Lookup**
-```bash
 nslookup google.com
-```
-![](../Linux_Networking/images/2025-11-03-17-45-36.png)
----
+</pre>
+<p><img src="../Linux_Networking/images/2025-11-03-17-33-02.png" alt="ping" /></p>
+<p><img src="../Linux_Networking/images/2025-11-03-17-44-06.png" alt="traceroute" /></p>
+<p><img src="../Linux_Networking/images/2025-11-03-17-44-58.png" alt="netstat" /></p>
+<p><img src="../Linux_Networking/images/2025-11-03-17-45-36.png" alt="nslookup" /></p>
 
-### **Step 7: Remote Login using SSH**
-```bash
+<h3 style="color:#0b3a75; background:#eef6ff; padding:8px 10px; border-radius:8px;">
+🔹 Step 7–8: Remote login & SCP transfer
+</h3>
+<pre style="background:#0d1b2a; color:#e6f7ff; padding:12px; border-radius:8px; overflow:auto;">
 ssh user@192.168.1.10
-```
-![](../Linux_Networking/images/2025-11-03-17-46-57.png)
----
-### **Step 8: File Transfer using SCP**
-```bash
 scp test.txt user@192.168.1.10:/home/user/
-```
-![](../Linux_Networking/images/2025-11-03-17-47-28.png)
----
-# **🏠 GUI**
+</pre>
+<p><img src="../Linux_Networking/images/2025-11-03-17-46-57.png" alt="ssh remote" /></p>
+<p><img src="../Linux_Networking/images/2025-11-03-17-47-28.png" alt="scp" /></p>
 
-# **✅1) Prepare & secure the remote machine (run on friend’s laptop)**
+<hr style="border:0; height:1px; background:linear-gradient(90deg,#eee,#ddd); margin:18px 0;" />
 
-Run these on the friend’s laptop (they must have sudo):
+<h2 style="color:#0b5cff; background:linear-gradient(90deg,#f0f8ff,#e6f0ff); padding:12px 14px; border-radius:10px;">
+🏠 <strong>GUI — Secure Remote Desktop & X11</strong>
+</h2>
 
-# **install SSH and optional VNC**
-```bash
+<h3 style="color:#006064; background:#e6fffb; padding:8px 10px; border-radius:8px;">
+✅ 1) Prepare & secure the remote machine (friend's laptop)
+</h3>
+<pre style="background:#0d1b2a; color:#e6f7ff; padding:12px; border-radius:8px; overflow:auto;">
 sudo apt update
 sudo apt install -y openssh-server tigervnc-standalone-server
-```
-![](../Linux_Networking/images/2025-11-03-19-02-37.png)
----
-
-# **create non-root user if needed (won't fail if exists)**
-```bash
 sudo useradd -m frienduser || true
-```
-![](../Linux_Networking/images/2025-11-03-17-50-49.png)
----
-
-# **enable and start SSH**
-```bash
 sudo systemctl enable --now ssh
-```
-![](../Linux_Networking/images/2025-10-28-12-55-11.png)
----
-
-# **add your public key (replace <your-pubkey>) and set safe permissions**
-```bash
 sudo -u frienduser mkdir -p /home/frienduser/.ssh
 echo "<your-pubkey>" | sudo tee -a /home/frienduser/.ssh/authorized_keys
 sudo chmod 700 /home/frienduser/.ssh
 sudo chmod 600 /home/frienduser/.ssh/authorized_keys
 sudo chown -R frienduser:frienduser /home/frienduser/.ssh
-```
-![](../Linux_Networking/images/2025-11-03-17-57-19.png)
-
----
-
-Verify sshd is running:
-```bash
 sudo systemctl status ssh --no-pager
-# or
 ss -tlnp | grep :22
-```
-![](../Linux_Networking/images/2025-11-03-17-59-06.png)
----
-# ✅2) Test X11 forwarding (single GUI app) — from your laptop
+</pre>
+<p><img src="../Linux_Networking/images/2025-11-03-19-02-37.png" alt="install ssh/vnc" /></p>
+<p><img src="../Linux_Networking/images/2025-11-03-17-50-49.png" alt="create user" /></p>
+<p><img src="../Linux_Networking/images/2025-10-28-12-55-11.png" alt="ssh status" /></p>
+<p><img src="../Linux_Networking/images/2025-11-03-17-57-19.png" alt="authorized_keys" /></p>
+<p><img src="../Linux_Networking/images/2025-11-03-17-59-06.png" alt="ss port 22" /></p>
 
-Preflight on your laptop:
-
-Linux: usually ready.
-
-macOS: install & run XQuartz and start it before SSH.
-
-Windows: install an X server like VcXsrv or Xming and run it.
-
-Then on your laptop run:
-
-
-```bash
+<h3 style="color:#006064; background:#e6fffb; padding:8px 10px; border-radius:8px;">
+✅ 2) Test X11 forwarding (single GUI app) — from your laptop
+</h3>
+<p>Preflight: ensure local X server (Linux desktop, XQuartz on macOS, or VcXsrv/Xming on Windows) is running.</p>
+<pre style="background:#0d1b2a; color:#e6f7ff; padding:12px; border-radius:8px; overflow:auto;">
 ssh -p 22 -X frienduser@FRIEND_IP
-``
-# once connected, run a simple GUI test:
-```bash
+# on remote after login:
 xeyes &    # or gedit & or xclock &
-```
-![](../Linux_Networking/images/2025-11-03-18-02-35.png)
-Success criteria: the GUI app window appears on your laptop and is responsive.
+</pre>
+<p><img src="../Linux_Networking/images/2025-11-03-18-02-35.png" alt="x11 example" /></p>
+<p><strong>Success criteria:</strong> GUI app window appears on your laptop and is responsive.</p>
 
-Troubleshooting quick checks:
-
-If you see Warning: No xauth data; using fake or X apps fail: try -Y (trusted) instead of -X: ssh -Y -p 22 frienduser@FRIEND_IP.
-
-Ensure DISPLAY is set on the SSH session (run echo $DISPLAY — should show something like localhost:10.0).
-
-Ensure client X server (XQuartz/VcXsrv) is running and allowing connections.
-
-Security note: X11 forwards every GUI app over SSH, but X11 is older and can let remote apps access local X resources — use only with trusted machines. For stronger isolation, prefer the VNC-over-SSH approach below.
-
-# ✅ 3) Full desktop: VNC server on friend’s laptop + SSH tunnel from your laptop
-
-On friend’s laptop (as frienduser):
-
-
-# start a VNC server on display :1 (creates :1 -> TCP 5901)
-```bash
+<h3 style="color:#006064; background:#e6fffb; padding:8px 10px; border-radius:8px;">
+✅ 3) Full desktop: VNC server on friend’s laptop + SSH tunnel from your laptop
+</h3>
+<pre style="background:#0d1b2a; color:#e6f7ff; padding:12px; border-radius:8px; overflow:auto;">
+# on friend (as frienduser)
 vncserver :1
-# optionally stop with: vncserver -kill :1
-```
-(Configure desktop environment in ~/.vnc/xstartup if needed — many distros auto-configure.)
 
-On your laptop: create a local SSH tunnel (keeps VNC server bound to localhost on remote; only SSH port open externally)
-
-
-# create an SSH tunnel mapping your localhost:5901 to friend's localhost:5901
-```bash
+# on your laptop (create tunnel)
 ssh -L 5901:localhost:5901 -p 22 frienduser@FRIEND_IP -N &
-# -N = no remote command; & runs in background (adjust as preferred)
-```
-![](../Linux_Networking/images/2025-11-03-18-15-13.png)
----
-Then open your VNC viewer and connect to:
 
-```bash
+# open VNC client to:
 localhost:5901
-```
-![](../Linux_Networking/images/2025-11-03-18-55-57.png)
-## **Output / Observations**
+</pre>
+<p><img src="../Linux_Networking/images/2025-11-03-18-15-13.png" alt="ssh tunnel" /></p>
+<p><img src="../Linux_Networking/images/2025-11-03-18-55-57.png" alt="vnc client" /></p>
 
-| Command     | Result                                      |
-|-------------|---------------------------------------------|
-| `ip addr`   | Lists network interfaces and IP addresses   |
-| `ping`      | Replies received indicate connectivity      |
-| `traceroute`| Displays the route path to the destination  |
-| `nslookup`  | Shows DNS IP information                    |
-| `ssh`       | Connects to a remote machine securely       |
-| `scp`       | Transfers files securely over SSH           |
+<hr style="border:0; height:1px; background:linear-gradient(90deg,#eee,#ddd); margin:18px 0;" />
 
----
+<h2 style="color:#0b3a75; background:#eef6ff; padding:12px 14px; border-radius:10px;">
+📈 <strong>Output / Observations</strong>
+</h2>
+<table style="width:100%; border-collapse:collapse; margin-top:8px;">
+<tr style="background:#0b69ff; color:#fff;">
+<th style="padding:8px; text-align:left;">Command</th>
+<th style="padding:8px; text-align:left;">Result</th>
+</tr>
+<tr style="background:#f7f9ff;">
+<td style="padding:8px;"><code>ip addr</code></td>
+<td style="padding:8px;">Lists network interfaces and IP addresses</td>
+</tr>
+<tr>
+<td style="padding:8px;"><code>ping</code></td>
+<td style="padding:8px;">Replies received indicate connectivity</td>
+</tr>
+<tr style="background:#f7f9ff;">
+<td style="padding:8px;"><code>traceroute</code></td>
+<td style="padding:8px;">Displays the route path to the destination</td>
+</tr>
+<tr>
+<td style="padding:8px;"><code>nslookup</code></td>
+<td style="padding:8px;">Shows DNS IP information</td>
+</tr>
+<tr style="background:#f7f9ff;">
+<td style="padding:8px;"><code>ssh</code></td>
+<td style="padding:8px;">Connects to a remote machine securely</td>
+</tr>
+<tr>
+<td style="padding:8px;"><code>scp</code></td>
+<td style="padding:8px;">Transfers files securely over SSH</td>
+</tr>
+</table>
 
-## **Result**
-Basic Linux networking commands were successfully executed and network connectivity and configuration were verified.
+<hr style="border:0; height:1px; background:linear-gradient(90deg,#eee,#ddd); margin:18px 0;" />
 
----
+<h2 style="color:#0b5cff; background:linear-gradient(90deg,#f0f8ff,#e6f0ff); padding:12px 14px; border-radius:10px;">
+✅ <strong>Result & Conclusion</strong>
+</h2>
+<p>Basic Linux networking commands were successfully executed and network connectivity and configuration were verified. SSH and VNC procedures were demonstrated for both LAN and WAN scenarios.</p>
 
-## **Conclusion**
-Linux provides powerful built-in commands for networking tasks such as configuration, troubleshooting, monitoring, and secure communication between systems.
+<hr style="border:0; height:1px; background:linear-gradient(90deg,#eee,#ddd); margin:18px 0;" />
 
----
+<h2 style="color:#7b3b00; background:linear-gradient(90deg,#fff7e6,#fff2d9); padding:12px 14px; border-radius:10px;">
+❓ <strong>Viva Questions (Quick)</strong>
+</h2>
 
-## **Viva Questions**
+<h4 style="color:#0b3a75;">What is the purpose of the <code>ping</code> command?</h4>
+<p>The <code>ping</code> command is used to test network connectivity by sending ICMP Echo Request packets and measuring replies and round-trip time.</p>
 
-### ❓ What is the purpose of the `ping` command?
+<h4 style="color:#0b3a75;">What is the difference between SSH and Telnet?</h4>
+<table style="width:100%; border-collapse:collapse; margin-top:8px;">
+<tr style="background:#0b69ff; color:#fff;">
+<th style="padding:8px;">Feature</th><th style="padding:8px;">SSH (Secure Shell)</th><th style="padding:8px;">Telnet</th>
+</tr>
+<tr style="background:#f7f9ff;">
+<td style="padding:8px;">Security</td><td style="padding:8px;">Encrypted communication</td><td style="padding:8px;">No encryption</td>
+</tr>
+<tr>
+<td style="padding:8px;">Default Port</td><td style="padding:8px;">22</td><td style="padding:8px;">23</td>
+</tr>
+<tr style="background:#f7f9ff;">
+<td style="padding:8px;">Usage</td><td style="padding:8px;">Secure remote login</td><td style="padding:8px;">Unsecure remote login</td>
+</tr>
+</table>
 
-### ✨The `ping` command is used to test network connectivity between the source and a destination host. It sends ICMP Echo Request packets and waits for Echo Reply packets to verify whether the destination is reachable and to measure round-trip time.
+<h4 style="color:#0b3a75;">How does <code>traceroute</code> help?</h4>
+<p><code>traceroute</code> shows each hop between source and destination and helps identify delays and routing issues.</p>
 
----
+<h4 style="color:#0b3a75;">Why is DNS used?</h4>
+<p>DNS maps human-friendly hostnames to IP addresses so machines can route network packets correctly.</p>
 
-### ❓ What is the difference between SSH and Telnet?
-
-### ✨| Feature | SSH (Secure Shell) | Telnet |
-|----------|-------------------|--------|
-| Security | Encrypted communication | No encryption |
-| Default Port | 22 | 23 |
-| Usage | Secure remote login | Unsecure remote login |
-| Current Status | Widely used | Mostly outdated |
-
-*SSH is preferred over Telnet because it provides secure communication.*
-
----
-
-### ❓ How does `traceroute` help in network troubleshooting?
-
-### ✨`traceroute` displays the path taken by packets from the local system to a remote host. It shows each intermediate router (hop) along the path and the time taken. It helps identify:
-- Network delays
-- Connection failures
-- Routing issues
-
----
-
-### ❓ Why is DNS used in networking?
-
-### ✨DNS (Domain Name System) translates human-friendly domain names like `www.google.com` into machine-readable IP addresses like `142.250.182.14`. This is necessary because computers communicate using IP addresses, not domain names.
-
----
-
-### ❓ How can you transfer a file securely in Linux?
-
-### ✨Files can be transferred securely in Linux using the `scp` (Secure Copy) command, which uses SSH encryption.
-
-Example:
-```bash
+<h4 style="color:#0b3a75;">How to transfer files securely in Linux?</h4>
+<p>Use <code>scp</code> which leverages SSH encryption:</p>
+<pre style="background:#0d1b2a; color:#e6f7ff; padding:12px; border-radius:8px; overflow:auto;">
 scp file.txt user@192.168.1.10:/home/user/
-```
+</pre>
+
+<hr style="border:0; height:1px; background:linear-gradient(90deg,#eee,#ddd); margin:18px 0;" />
+
+<div align="center" style="padding:12px; background:linear-gradient(90deg,#fff,#f7fbff); border-radius:10px;">
+Made with ❤ — concise, colorful, and image-preserving overview of Linux Networking & SSH.
+</div>
