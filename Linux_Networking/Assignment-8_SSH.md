@@ -5,6 +5,7 @@
 </div>
 
 <div align="center">
+
 ![](../Linux_Networking/images/2025-10-28-12-24-08.png)
 </div>
 
